@@ -1,11 +1,60 @@
-.NavBar {
-  background: #f0f;
+@use '../../../scss/variables';
 
+.NavBar {
   &_link {
     background: #00f;
 
     &___active {
       background: #0ff;
+    }
+  }
+
+  &_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: variables.$color-black;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &_activeLabel{
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    background: variables.$color-black;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &_activeInput:checked ~ &_wrapper{
+    clip-path: circle(75%);
+  }
+
+  &_activeInput:checked ~ &_activeLabel{
+    color: #fff;
+  }
+
+  &_activeInput:checked ~ &_activeLabel i:before{
+    content: "\f00d";
+  }
+
+  @keyframes rotate {
+    0%{
+      filter: hue-rotate(0deg);
+    }
+    100%{
+      filter: hue-rotate(360deg);
     }
   }
 }

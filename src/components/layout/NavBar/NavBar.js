@@ -6,7 +6,15 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
     return (
         <div className={styles.NavBar} data-testid="NavBar">
-            <div>
+            <input
+                type="checkbox"
+                className={styles.NavBar_activeInput}
+                id="navbaractive"
+            />
+            <label htmlFor="navbaractive" className={styles.NavBar_activeLabel}>
+                <i className="fas fa-bars"></i>
+            </label>
+            <div className={styles.NavBar_wrapper}>
                 <NavLink
                     to="/"
                     className={({ isActive }) =>
