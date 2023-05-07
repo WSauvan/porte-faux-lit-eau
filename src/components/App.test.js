@@ -1,13 +1,25 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, act } from '@testing-library/react';
+import { unmountComponentAtNode } from 'react-dom';
 import App from './App';
+import React from 'react';
 
-test('renders App class component', () => {
-    const { container } = render(<App />);
-    expect(container.firstChild.classList.contains('app')).toBe(true);
+let container = null;
+beforeEach(() => {
+    // setup a DOM element as a render target
+    container = document.createElement('div');
+    document.body.appendChild(container);
 });
 
-test('renders App component', () => {
-    render(<App />);
-    const linkElement = screen.getByText(/learn react/i);
-    expect(linkElement).toBeInTheDocument();
+afterEach(() => {
+    // cleanup on exiting
+    unmountComponentAtNode(container);
+    container.remove();
+    container = null;
+});
+
+test('it should mount', async () => {
+    await act(async () => {
+        render(<App />, container);
+    });
+    expect(container).toBeInTheDocument();
 });

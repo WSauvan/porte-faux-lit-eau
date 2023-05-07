@@ -1,20 +1,24 @@
 import './App.scss';
+import NavBar from './layout/NavBar/NavBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ContactPage from './pages/Contact/Contact';
-import HomePage from './pages/Home/Home';
-import ProjectsPage from './pages/Projects/Projects';
-import SkillsPage from './pages/Skills/Skills';
+import React, { Suspense, lazy } from 'react';
+const ContactPage = lazy(() => import('./pages/Contact/Contact'));
+const ProjectsPage = lazy(() => import('./pages/Projects/Projects'));
+const SkillsPage = lazy(() => import('./pages/Skills/Skills'));
+const HomePage = lazy(() => import('./pages/Home/Home'));
 
 const App = () => (
-    <div className="app">
-        <div className="Home">Learn React</div>
+    <div id="App" data-testid="App" className="app">
         <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="contact" element={<ContactPage />} />
-                <Route path="projects" element={<ProjectsPage />} />
-                <Route path="skills" element={<SkillsPage />} />
-            </Routes>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="contact" element={<ContactPage />} />
+                    <Route path="projects" element={<ProjectsPage />} />
+                    <Route path="skills" element={<SkillsPage />} />
+                </Routes>
+            </Suspense>
+            <NavBar />
         </BrowserRouter>
     </div>
 );
