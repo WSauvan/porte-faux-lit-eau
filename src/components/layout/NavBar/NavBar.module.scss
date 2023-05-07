@@ -1,0 +1,11 @@
+.NavBar {
+  background: #f0f;
+
+  &_link {
+    background: #00f;
+
+    &___active {
+      background: #0ff;
+    }
+  }
+}
