@@ -1,0 +1,11 @@
+@use '../../scss/variables';
+
+.HomeLink {
+  position: fixed;
+  bottom: variables.$fixed-buttons-position;
+  right: variables.$fixed-buttons-position;
+
+  &_button {
+    cursor: pointer;
+  }
+}
