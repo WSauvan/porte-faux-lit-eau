@@ -3,6 +3,7 @@ import NavBar from './layout/NavBar/NavBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React, { Suspense, lazy } from 'react';
 import useImportStyle from '../customHooks/useImportStyle';
+const HomeLink = lazy(() => import('./HomeLink/HomeLink'));
 const ContactPage = lazy(() => import('./pages/Contact/Contact'));
 const ProjectsPage = lazy(() => import('./pages/Projects/Projects'));
 const SkillsPage = lazy(() => import('./pages/Skills/Skills'));
@@ -22,6 +23,7 @@ const App = () => {
                         <Route path="projects" element={<ProjectsPage />} />
                         <Route path="skills" element={<SkillsPage />} />
                     </Routes>
+                    <HomeLink />
                 </Suspense>
                 <NavBar />
             </BrowserRouter>
