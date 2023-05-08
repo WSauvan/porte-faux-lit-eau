@@ -63,10 +63,14 @@
     line-height: 50px;
     border-radius: 50%;
     font-size: 20px;
-    color: #fff;
+    color: colors.$white;
     cursor: pointer;
     background: colors.$black;
     transition: all variables.$default-transition-duration ease-in-out;
+  }
+
+  &_activeInput {
+    display: none;
   }
 
   &_activeInput:checked ~ &_wrapper{
@@ -74,7 +78,7 @@
   }
 
   &_activeInput:checked ~ &_activeLabel{
-    color: #fff;
+    color: colors.$white;
   }
 
   &_activeInput:checked ~ &_activeLabel i:before{
