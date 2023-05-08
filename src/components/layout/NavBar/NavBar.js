@@ -18,7 +18,10 @@ const NavBar = () => {
                 className={styles.NavBar_activeInput}
                 id={navbarActiveCheckboxId}
             />
-            <label htmlFor="navbaractive" className={styles.NavBar_activeLabel}>
+            <label
+                htmlFor={navbarActiveCheckboxId}
+                className={styles.NavBar_activeLabel}
+            >
                 <i className="fas fa-bars"></i>
             </label>
             <div className={styles.NavBar_wrapper}>
