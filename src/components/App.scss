@@ -1,6 +1,13 @@
+@use '../scss/colors';
+
 .app {
   text-align: center;
-  color: #fff;
-  background-color: #282c34;
+  color: colors.$white;
+  background-color: colors.$main-background;
   min-height: 100vh;
+  overflow: hidden;
+
+  * {
+    box-sizing: border-box;
+  }
 }

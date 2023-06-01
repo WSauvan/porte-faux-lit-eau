@@ -1,0 +1,20 @@
+@use '../../../scss/colors';
+@use '../../../scss/variables';
+@use '../../../scss/fonts';
+
+.Home {
+
+  &_title {
+    margin-top: 15vh;
+    font-size: fonts.$font-xxxl;
+    font-weight: fonts.$font-weight-bold;
+  }
+
+  &_subtitle {
+    margin-top: variables.$gap-lg;
+  }
+
+  &_homegif {
+    margin-top: variables.$gap-xxl;
+  }
+}
