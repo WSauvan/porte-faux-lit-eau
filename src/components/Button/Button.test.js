@@ -2,18 +2,18 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
-import HomeLink from './HomeLink';
+import Button from './Button';
 
-describe('<HomeLink />', () => {
+describe('<Button />', () => {
     test('it should mount', async () => {
         render(
             <BrowserRouter>
-                <HomeLink />
+                <Button link="/" />
             </BrowserRouter>
         );
 
-        const homeLink = screen.getByTestId('HomeLink');
+        const button = screen.getByTestId('Button');
 
-        expect(homeLink).toBeInTheDocument();
+        expect(button).toBeInTheDocument();
     });
 });

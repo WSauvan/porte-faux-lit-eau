@@ -1,0 +1,34 @@
+@use '../../scss/colors';
+@use '../../scss/variables';
+@use '../../scss/fonts';
+
+.Button {
+  display: inline-block;
+  margin-top: variables.$gap-lg;
+  padding: variables.$gap-xs variables.$gap-md;
+  background-color: colors.$white;
+  color: colors.$primary;
+  font-size: fonts.$font-md;
+  font-weight: fonts.$font-weight-bold;
+  text-decoration: none;
+  border-radius: variables.$default-border-radius;
+  border: 1px solid colors.$secondary;
+  cursor: pointer;
+  transition: background-color variables.$default-transition-duration,
+    color variables.$default-transition-duration,
+    transform variables.$default-transition-duration,
+    box-shadow variables.$default-transition-duration;
+  box-shadow: 0 5px 0 colors.$secondary;
+
+  &:hover {
+    background-color: colors.$primary;
+    color: colors.$white;
+    transform: translateY(1px);
+    box-shadow: 0 4px 0 colors.$secondary;
+  }
+
+  &:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 0 colors.$secondary;
+  }
+}

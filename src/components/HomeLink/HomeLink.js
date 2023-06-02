@@ -1,18 +1,14 @@
 import React from 'react';
 import styles from './HomeLink.module.scss';
-import { useNavigate } from 'react-router-dom';
+import Button from '../Button/Button.lazy';
 
 // Intentional programmatic navigation for skill purposes
 const HomeLink = () => {
-    const navigate = useNavigate();
-    const onLinkClick = () => {
-        navigate('/');
-    };
     return (
         <div className={styles.HomeLink} data-testid="HomeLink">
-            <button className={styles.HomeLink_button} onClick={onLinkClick}>
+            <Button label="Know more about me" link="/">
                 <i className="fa fa-home"></i>
-            </button>
+            </Button>
         </div>
     );
 };
