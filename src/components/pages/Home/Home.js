@@ -13,7 +13,11 @@ const HomePage = () => (
             Know more about me
         </Button>
         <div className={styles.Home_homegif}>
-            <img src={homeGif} alt="gif animation" />
+            <img
+                className={styles.Home_homegif_image}
+                src={homeGif}
+                alt="gif animation"
+            />
         </div>
     </div>
 );

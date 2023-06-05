@@ -17,4 +17,8 @@
   &_homegif {
     margin-top: variables.$gap-xxl;
   }
+
+  &_homegif_image {
+    max-width: 100%;
+  }
 }
