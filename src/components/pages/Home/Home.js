@@ -1,7 +1,7 @@
 import styles from './Home.module.scss';
 import homeGif from '../../../assets/full-stack-development.gif';
 import ModalButton from '../../layout/Modal/ModalButton/ModalButton.lazy';
-import NavigateButton from '../../NavigateButton/NavigateButton.lazy';
+import NavigateButton from '../../layout/Buttons/NavigateButton/NavigateButton.lazy';
 
 const HomePage = () => (
     <div className={styles.Home} data-testid="Home">

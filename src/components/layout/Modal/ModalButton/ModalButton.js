@@ -1,7 +1,7 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
 import ModalContent from '../ModalContent/ModalContent';
-import Button from '../../../Button/Button';
+import Button from '../../Buttons/Button/Button';
 
 const ModalButton = ({ children }) => {
     const [showModal, setShowModal] = React.useState(false);

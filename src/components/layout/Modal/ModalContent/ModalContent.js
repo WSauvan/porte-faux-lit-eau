@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ModalContent.module.scss';
-import Button from '../../../Button/Button';
+import Button from '../../Buttons/Button/Button';
 
 const ModalContent = ({ children, onClose }) => (
     <div className={styles.ModalContent} data-testid="ModalContent">

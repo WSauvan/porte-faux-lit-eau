@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './HomeLink.module.scss';
-import NavigateButton from '../NavigateButton/NavigateButton';
+import NavigateButton from '../layout/Buttons/NavigateButton/NavigateButton';
 
 // Intentional programmatic navigation for skill purposes
 const HomeLink = () => {
