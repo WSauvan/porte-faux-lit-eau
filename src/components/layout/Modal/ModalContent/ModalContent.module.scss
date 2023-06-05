@@ -1,0 +1,30 @@
+@use '../../../../scss/colors';
+@use '../../../../scss/variables';
+
+.ModalContent {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &_inner {
+    position: relative;
+    background-color: colors.$white;
+    margin: 20% auto;
+    padding: variables.$gap-md variables.$gap-xxl;
+    border: 1px solid colors.$secondary;
+    border-radius: variables.$default-border-radius;
+    max-width: variables.$modal-max-width;
+    min-height: variables.$modal-min-height;
+  }
+
+  &_close {
+    position: absolute;
+    top: -6px;
+    right: -1px;
+  }
+}

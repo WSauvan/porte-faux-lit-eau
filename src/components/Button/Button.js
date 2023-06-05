@@ -1,19 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Button.module.scss';
-import { useNavigate } from 'react-router-dom';
 
-const Button = ({ children, link }) => {
-    const navigate = useNavigate();
-    const onLinkClick = () => {
-        navigate(link);
-    };
-
+const Button = ({ children, onClick }) => {
     return (
         <button
             className={styles.Button}
             data-testid="Button"
-            onClick={onLinkClick}
+            onClick={onClick}
         >
             {children}
         </button>
@@ -21,7 +15,7 @@ const Button = ({ children, link }) => {
 };
 
 Button.propTypes = {
-    link: PropTypes.string.isRequired,
+    onClick: PropTypes.func,
 };
 
 export default Button;

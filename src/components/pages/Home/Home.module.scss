@@ -10,7 +10,7 @@
     font-weight: fonts.$font-weight-bold;
   }
 
-  &_subtitle {
+  &_paragraph {
     margin-top: variables.$gap-lg;
   }
 
@@ -20,5 +20,9 @@
 
   &_homegif_image {
     max-width: 100%;
+  }
+
+  &_modalContent {
+    text-align: center;
   }
 }
