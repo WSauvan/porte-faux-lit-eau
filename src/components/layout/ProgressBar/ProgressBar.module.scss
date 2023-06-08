@@ -1,0 +1,29 @@
+@use '../../../scss/colors';
+@use '../../../scss/variables';
+@use '../../../scss/fonts';
+
+.ProgressBar {
+  text-align: left;
+
+  &_label {
+    color: colors.$white;
+    margin-bottom: variables.$gap-md;
+    display: inline-block;
+    font-size: fonts.$font-lg;
+  }
+
+  &_bar {
+    background-color: colors.$primary;
+    border: 1px solid colors.$secondary;
+    height: variables.$gap-md;
+    border-radius: variables.$default-border-radius;
+    overflow: hidden;
+    margin-bottom: variables.$gap-md;
+
+    &_progress {
+      height: 100%;
+      background-color: colors.$secondary;
+      transition: width variables.$default-transition-duration ease;
+    }
+  }
+}
