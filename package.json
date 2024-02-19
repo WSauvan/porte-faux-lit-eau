@@ -41,7 +41,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://wsauvan.github.io",
+  "homepage": "https://wsauvan.github.io/porte-faux-lit-eau",
   "devDependencies": {
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-react": "^7.18.6",
