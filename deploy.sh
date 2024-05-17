@@ -11,10 +11,11 @@ mkdir -p ~/.ssh
 
 ssh-keyscan -H $NAS_HOST >> ~/.ssh/known_hosts
 
-echo "Creating deployment directory on NAS..."
-ssh -i $SSH_KEY $NAS_USER@$NAS_HOST "mkdir -p $NAS_DEPLOY_PATH"
-
 echo "Copying build files to NAS..."
-rsync -avz -e "ssh -i $SSH_KEY" build/ $NAS_USER@$NAS_HOST:$NAS_DEPLOY_PATH
+rsync -avz -e "ssh -i $SSH_KEY -o StrictHostKeyChecking=no" build/ $NAS_USER@$NAS_HOST:$NAS_DEPLOY_PATH
+if [ $? -ne 0 ]; then
+  echo "Failed to copy files to NAS."
+  exit 1
+fi
 
 echo "Deployment completed successfully."
