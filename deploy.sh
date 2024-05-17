@@ -11,8 +11,13 @@ mkdir -p ~/.ssh
 
 ssh-keyscan -H $NAS_HOST >> ~/.ssh/known_hosts
 
-echo "Copying build files to NAS..."
-rsync -avz -e "ssh -i $SSH_KEY -o StrictHostKeyChecking=no" build/ $NAS_USER@$NAS_HOST:$NAS_DEPLOY_PATH
+echo "Copying build files to NAS using SFTP..."
+sftp -i $SSH_KEY -o StrictHostKeyChecking=no $NAS_USER@$NAS_HOST << EOF
+  lcd build
+  cd $NAS_DEPLOY_PATH
+  put -r * .
+  bye
+EOF
 if [ $? -ne 0 ]; then
   echo "Failed to copy files to NAS."
   exit 1
