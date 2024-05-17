@@ -7,6 +7,8 @@ SSH_KEY=$4
 
 echo "Starting deployment..."
 
+mkdir -p ~/.ssh
+
 ssh-keyscan -H $NAS_HOST >> ~/.ssh/known_hosts
 
 echo "Creating deployment directory on NAS..."
