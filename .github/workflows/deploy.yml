@@ -33,6 +33,7 @@ jobs:
         run: |
           echo "${SSH_KEY}" > deploy_key
           chmod 600 deploy_key
+          cat deploy_key
           ssh -i deploy_key -o StrictHostKeyChecking=no ${{ secrets.NAS_USER }}@${{ secrets.NAS_HOST }} "echo Connected"
           chmod +x deploy.sh
           ./deploy.sh $NAS_HOST $NAS_USER $NAS_DEPLOY_PATH deploy_key
