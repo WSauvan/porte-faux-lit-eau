@@ -1,4 +1,5 @@
 @use '../scss/colors';
+@use '../scss/vendor/coreui/custom';
 
 .app {
   text-align: center;
@@ -9,5 +10,13 @@
 
   * {
     box-sizing: border-box;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .main-container {
+    padding-top: 15vh;
   }
 }

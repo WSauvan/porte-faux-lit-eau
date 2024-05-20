@@ -1,0 +1,28 @@
+@import "../../../../node_modules/@coreui/coreui/scss/coreui";
+@import "../../colors";
+
+.accordion {
+  --cui-accordion-color: #{$black}; /* Texte blanc pour contraste */
+  --cui-accordion-bg: #{$white}; /* Arrière-plan primaire */
+  --cui-accordion-transition: all 0.3s ease; /* Transition douce */
+  --cui-accordion-border-color: #{$primary_variant}; /* Bordure secondaire */
+  --cui-accordion-border-width: #{$accordion-border-width}; /* Largeur de bordure */
+  --cui-accordion-border-radius: #{$accordion-border-radius}; /* Rayon de bordure */
+  --cui-accordion-inner-border-radius: #{$accordion-inner-border-radius};
+  --cui-accordion-btn-padding-x: #{$accordion-button-padding-x};
+  --cui-accordion-btn-padding-y: #{$accordion-button-padding-y};
+  --cui-accordion-btn-color: #{$white}; /* Couleur du bouton */
+  --cui-accordion-btn-bg: #{$primary}; /* Arrière-plan du bouton */
+  --cui-accordion-btn-icon: #{escape-svg($accordion-button-icon)}; /* Icône SVG échappée */
+  --cui-accordion-btn-icon-width: 1rem; /* Largeur de l'icône */
+  --cui-accordion-btn-icon-transform: rotate(0deg); /* Transformation de l'icône */
+  --cui-accordion-btn-icon-transition: transform 0.3s ease; /* Transition de l'icône */
+  --cui-accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon)}; /* Icône active SVG échappée */
+  --cui-accordion-btn-focus-box-shadow: #{$accordion-button-focus-box-shadow}; /* Ombre de mise au point */
+  --cui-accordion-body-padding-x: #{$accordion-body-padding-x};
+  --cui-accordion-body-padding-y: #{$accordion-body-padding-y};
+  --cui-accordion-active-color: #{$white}; /* Couleur active */
+  --cui-accordion-active-bg: #{$primary_variant}; /* Arrière-plan actif */
+  --cui-accordion-hover-bg: #{$highlight}; /* Arrière-plan au survol */
+  --cui-accordion-hover-color: #{$white}; /* Couleur du texte au survol */
+}

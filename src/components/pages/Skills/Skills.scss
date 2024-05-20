@@ -2,10 +2,6 @@
 @use '../../../scss/fonts';
 
 .skills {
-  padding-top: 15vh;
-  max-width: variables.$container-width;
-  margin: auto;
-
   &__group {
     padding: variables.$gap-md 0;
   }
