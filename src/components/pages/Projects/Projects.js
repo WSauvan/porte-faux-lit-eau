@@ -4,9 +4,9 @@ import { CAccordion, CAccordionItem, CAccordionHeader, CAccordionBody, CContaine
 const ProjectsPage = () =>
     <CContainer sm className='projects main-container'>
         <h1>Projects</h1>
-        <CAccordion activeItemKey={1}>
+        <CAccordion activeItemKey={1} className={'projects__project'}>
             <CAccordionItem itemKey={1}>
-                <CAccordionHeader>St Laurent Dot portal</CAccordionHeader>
+                <CAccordionHeader className={'projects__header'}>St Laurent Dot portal</CAccordionHeader>
                 <CAccordionBody>
                     <h2>Technologies : Laravel, Backpack, Vue.js</h2>
                     <p>
@@ -49,8 +49,9 @@ const ProjectsPage = () =>
                     </p>
                 </CAccordionBody>
             </CAccordionItem>
-            <CAccordionItem itemKey={2}>
-                <CAccordionHeader>Laravel API for Notin's caravan configurator</CAccordionHeader>
+            <CAccordionItem itemKey={2} className={'projects__project'}>
+                <CAccordionHeader className={'projects__header'}>Laravel API for Notin's caravan
+                    configurator</CAccordionHeader>
                 <CAccordionBody>
                     <h2>Technologies: Laravel backend and Nuxt frontend</h2>
 

@@ -2,4 +2,18 @@
 
 .projects {
   text-align: left;
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  &__project {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-color: white;
+  }
+
+  &__header button {
+    font-size: 2rem;
+    font-weight: bold;
+  }
 }
