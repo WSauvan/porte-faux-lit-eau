@@ -8,6 +8,7 @@ test('renders Projects class component', () => {
 
 test('renders Projects text component', () => {
     render(<Projects />);
-    const linkElement = screen.getByText(/projects/i);
-    expect(linkElement).toBeInTheDocument();
+    // check if there is a H1 element with the text "Projects" in it
+    const h1 = screen.getByRole('heading', { level: 1, name: /Projects/i });
+    expect(h1).toBeInTheDocument();
 });
